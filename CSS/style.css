@@ -127,6 +127,7 @@ main section h2 {
 .col-container {
     display:flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 50px;
 }
 .col-container .col {
@@ -161,10 +162,25 @@ main section h2 {
     margin-top: 35px;
     font-size: 25px;
 }
-.card-footer h5 {
+.col-footer h5 {
     margin-bottom: 20px;
     font-size: 18px;
 }
-.card-footer i {
+.col-footer i {
     color: #0061ff;
+}
+.col.big {
+    width: 100%;
+}
+
+.col.big .col-footer {
+    padding: 26px;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.col.big .col-body .flex h3{
+    margin-bottom: 24px;
 }
