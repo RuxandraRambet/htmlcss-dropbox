@@ -8,7 +8,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
 }
-.container.big {
+.container-big {
     width: 100%;
 }
 ul {
@@ -21,13 +21,19 @@ ul {
     text-decoration: none;
     color: white;
 }
+.row {
+    display: flex;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 /* HEADER */
-header .container.big {
+header .container-big {
     display: flex;
     justify-content: space-between;
     padding: 30px 20px;
     color: gray;
-    background-color: red;
 }
 nav {
     min-height: 50px;
@@ -43,6 +49,46 @@ nav .nav-content .main-menu {
     align-items: center;
     gap: 40px;
 }
-.btn.btn-small {
+.btn-small {
     padding: 10px 15px;
+}
+p {
+    color: grey;
+}
+/* Jumbotron */
+ .section.big {
+    background-color: #b4d0e7;
+    padding-top: 80px;
+}
+h1 {
+    font-size: 70px;
+    font-family: 'Open Sans', sans-serif 
+}
+section .row .col1 {
+    width: 30%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+section .row .col1 p:first-child {
+    margin-top: 45px;
+}
+.btn-medium {
+    padding: 13px 15px;
+}
+section .row .col1 i{
+    font-size: 50px;
+    padding-top: 50px;
+}
+section .row .col2 {
+    width: 70%;
+}
+section .row .col2 img {
+    width: 100%;
+    display: block;
+}
+section .row .col2 .header-img {
+    position: relative;
+    bottom: -70px;
 }
