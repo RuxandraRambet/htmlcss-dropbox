@@ -265,7 +265,15 @@ main section h2 {
     transform: translate(-50%, -50%);
 }
 .designit {
+    background-color: #d1e9cd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#inner-box {
     background-color: #a2d39b;
+    width: 90%;
+    height: 90%;
 }
 .asu {
     background-color: #61082b;
