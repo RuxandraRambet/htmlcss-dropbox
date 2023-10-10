@@ -7,6 +7,7 @@
 /* COMMON */
 body {
     font-family: 'Open Sans', sans-serif;
+    color: grey;
 }
 .container-big {
     width: 100%;
@@ -17,6 +18,8 @@ ul {
 .btn {
     background-color: #0061ff;
     text-align: center;
+    border: 1px solid transparent;
+    display: inline-block;
 }
 .btn a {
     text-decoration: none;
@@ -24,31 +27,49 @@ ul {
 }
 .btn-big {
    padding: 14px 20px;
-
+}
+.btn-white {
+    background-color: white;
+    border: 1px solid grey;
+    color: grey;
+    display: inline-block;
+}
+.btn-white a {
+    text-decoration: none;
+    color: grey;
 }
 .row {
     display: flex;
 }
 .container {
-    max-width: 1200px;
+    max-width: 1050px;
     margin: 0 auto;
 }
-
+img {
+    width: 100%;
+    display: block;
+}
+h1, h2, h3, h4, h5, strong, i {
+    color: black;
+}
 h2 {
     font-size: 40px;
 }
-h2, h3, h5 {
+h2, h3, h5, strong{
     font-weight: 500;
 }
 .regularlink {
     text-decoration: underline;
-    color: #0061ff;
+    color: #0000ee;
 }
 hr {
     width: 25%;
     border-color: lightgray;
 }
 /* HEADER */
+nav {
+    height: 80px;
+}
 header .container-big {
     display: flex;
     justify-content: space-between;
@@ -74,44 +95,41 @@ nav .nav-content .main-menu {
 .btn-small {
     padding: 10px 15px;
 }
-p {
-    color: grey;
-}
+
 /* Jumbotron */
  .section.big {
     background-color: #b4d0e7;
-    padding-top: 120px;
+    padding-top: 80px;
+    margin-top: 0;
+}
+.section.big .container {
+    position: relative;
+    bottom: -80px;
 }
 h1 {
-    font-size: 70px;
+    font-size: 77px;
     font-family: 'Open Sans', sans-serif; 
+    margin-bottom: 50px ;
 }
 section .row .col1 {
     width: 30%;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-start;
-    justify-content: space-evenly;
 }
-
+.mb-30 {
+    margin-bottom: 30px;
+}
 .btn-medium {
     padding: 13px 15px;
 }
-section .row .col1 i{
-    font-size: 50px;
-    padding-top: 50px;
+.section.big i{
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+    font-size: 48px;
 }
 section .row .col2 {
     width: 70%;
 }
-section .row .col2 img {
-    width: 100%;
-    display: block;
-}
-section .row .col2 .header-img {
-    position: relative;
-    bottom: -70px;
-}
+
 
 /* MAIN */
 main section h2 {
@@ -152,6 +170,10 @@ main section h2 {
     margin: 50px 0 50px;
    
 }
+.col-body,
+.col-footer {
+    padding: 26px;
+} 
 .col-container .col ul .item-flex {
     display: flex;
 }
@@ -171,10 +193,7 @@ main section h2 {
 }
 .col.big {
     width: 100%;
-}
-
-.col.big .col-footer {
-    padding: 26px;
+    margin-bottom: 150px;
 }
 .flex {
     display: flex;
@@ -183,4 +202,112 @@ main section h2 {
 }
 .col.big .col-body .flex h3{
     margin-bottom: 24px;
+}
+.section-partner .col1 {
+    margin: 60px 40px;
+}
+.section-partner .col1 p {
+    margin: 30px 0;
+}
+.section-partner .col1 .btn-white {
+ padding: 15px;
+}
+.section-functions .col-container .col {
+    border: none;
+}
+.section-functions .col-bottom h3 {
+    margin-bottom: 40px ;
+}
+
+/* Clients section */
+.clients-number {
+    margin-bottom: 80px;
+}
+.clients-number h2 {
+    max-width: 60%;
+    padding-top: 80px;
+}
+.clients-logo {
+    display: flex;
+    max-width: 100%;
+}
+.left-block,
+.right-block {
+    display: flex;
+    flex-wrap: wrap;
+}
+.center-block {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px;
+}
+.center-block img {
+    max-width: 40%;
+}
+.left-block, .center-block, .right-block {
+   width: calc(100vw / 3);
+   height: calc(100vw / 3);
+   /* height: 640px; */
+}
+.client {
+    /* width: 320px;
+    height: 320px; */
+    width: calc(100% / 2);
+    height: calc(100% / 2);
+    position: relative;
+}
+.client img {
+    max-width: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.designit {
+    background-color: #a2d39b;
+}
+.asu {
+    background-color: #61082b;
+}
+.uf {
+    background-color: #0093ce ;
+}
+
+.toops {
+    background-color: #ff1c1c;
+}
+.wbr {
+    background-color: #d5001f;
+}
+.hearst {
+    background-color: #b4d0e7;
+}
+.lonely {
+    background-color: #0d2481;
+}
+.clear {
+    background-color: #ffd830;
+}
+/* SECONDO JUMBOTRON */
+.jumbobottom {
+    background-color:  #b4d0e7;
+}
+.jumbobottom .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.jumbobottom h2 {
+    color: #61082b;
+    max-width: 50%;
+}
+.jumbobottom .btn-big {
+    background-color: white;
+    color: grey;
+}
+.jumbobottom .btn-big a {
+    color: grey;
 }
