@@ -16,27 +16,33 @@ ul {
     list-style-type: none;
 }
 .btn {
-    background-color: #0061ff;
     text-align: center;
     border: 1px solid transparent;
     display: inline-block;
-}
-.btn a {
-    text-decoration: none;
     color: white;
+    padding: 10px 15px;
 }
-.btn-big {
-   padding: 14px 20px;
+.btn-blue {
+    background-color: blue;
+    
 }
 .btn-white {
-    background-color: white;
-    border: 1px solid grey;
-    color: grey;
-    display: inline-block;
+  background-color: white;
+  color: grey;
+  border: 1px solid grey;;
 }
-.btn-white a {
+.btn-white.p-40 {
+    padding: 10px 40px;
+    border: none;
+}
+.btn-inline {
+    display: inline;
+}
+a {
     text-decoration: none;
-    color: grey;
+}
+.btn:hover {
+    filter: brightness(1.4);
 }
 .row {
     display: flex;
@@ -62,38 +68,44 @@ h2, h3, h5, strong{
     text-decoration: underline;
     color: #0000ee;
 }
+.regularlink:hover {
+    color: rgb(2, 2, 41);
+    font-weight: bold;
+}
 hr {
     width: 25%;
     border-color: lightgray;
 }
 /* HEADER */
-nav {
-    height: 80px;
-}
-header .container-big {
+header nav {
     display: flex;
     justify-content: space-between;
-    padding: 20px 20px;
-    color: gray;
-}
-
-header .navbar{
+    align-items: center;
+    height: 80px;
+    line-height: 80px;
     position: fixed;
     right: 0;
     left: 0;
     top: 0;
     z-index: 99;
     background-color: white;
+    box-shadow: 0px 1px 2px #dedede;
 }
-nav .nav-content,
-nav .nav-content .main-menu {
+header nav ul {
     display: flex;
-    justify-content: conter;
-    align-items: center;
-    gap: 40px;
+    padding: 0 20px;
 }
-.btn-small {
-    padding: 10px 15px;
+header nav a {
+    text-decoration: none;
+    display: block;
+    color: grey;
+    padding: 0 20px;
+}
+#logo img {
+    padding-top: 25px;
+}
+header nav a:hover {
+    border-bottom: 2px solid currentColor;
 }
 
 /* Jumbotron */
@@ -116,9 +128,6 @@ section .row .col1 {
 }
 .mb-30 {
     margin-bottom: 30px;
-}
-.btn-medium {
-    padding: 13px 15px;
 }
 .section.big i{
     position: absolute;
@@ -209,9 +218,6 @@ main section h2 {
 .section-partner .col1 p {
     margin: 30px 0;
 }
-.section-partner .col1 .btn-white {
- padding: 15px;
-}
 .section-functions .col-container .col {
     border: none;
 }
@@ -241,6 +247,7 @@ main section h2 {
     flex-direction: column;
     gap: 40px;
     padding: 40px;
+    overflow: auto;
 }
 .center-block img {
     max-width: 40%;
@@ -248,11 +255,8 @@ main section h2 {
 .left-block, .center-block, .right-block {
    width: calc(100vw / 3);
    height: calc(100vw / 3);
-   /* height: 640px; */
 }
 .client {
-    /* width: 320px;
-    height: 320px; */
     width: calc(100% / 2);
     height: calc(100% / 2);
     position: relative;
@@ -263,6 +267,7 @@ main section h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    filter: invert(1)
 }
 .designit {
     background-color: #d1e9cd;
@@ -312,10 +317,60 @@ main section h2 {
     color: #61082b;
     max-width: 50%;
 }
-.jumbobottom .btn-big {
-    background-color: white;
-    color: grey;
+/* FAQ */
+.faq {
+    color: black;
+    font-weight: 500;
+    margin-bottom: 140px;
 }
-.jumbobottom .btn-big a {
-    color: grey;
+.faqhr {
+    width: 100%;
 }
+.question {
+    padding: 40px 0;
+}
+
+.info-extra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.info-extra a {
+    margin-right: 30px;
+}
+
+/* FOOTER */
+footer .container-big {
+    background-color: #000000;
+    color: white;
+}
+.footer-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+.footer-menu{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-menu ul {
+    margin:100px 0;
+}
+.footer-menu ul li h5{
+   color: white;
+   font-weight: bold;
+   font-size: 18px;
+   margin-bottom: 20px;
+}
+.footer-menu ul li {
+    padding: 10px 0 ;
+}
+footer hr {
+    width: 10%;
+}
+footer span,
+footer i {
+    color: lightgray;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 3px;
+} 
